@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #F0BCC0, #EDDFDE);
+    padding: 10px;
+}
+
+.to-do-list {
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    background-color: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do-list h2 {
+    color: #F0BCC0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.to-do-list p {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.icon {
+   width: 25px; 
+   margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background: #EDDFDE;
+    padding-left: 20px;
+    /*     margin-left: 25px; */
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #F0BCC0;
+    padding: 16px 50px;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+
+.list-contain ul, li {
+   list-style: none;
+   position: relative;
+   font-size: 16px;
+   padding: 12px 8px 12px 50px;
+   user-select: none;
+   cursor: pointer;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/radio.svg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 0;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #F0BCC0;
+}
+
+ul li.checked::before {
+    background-image: url(./images/circle-check\ \(1\).svg);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #F0BCC0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #EDDFDE;
+}
